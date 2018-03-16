@@ -10,4 +10,4 @@ server:
   port: 5020
 spring:
   application:
-    name: customer-service      
+    name: customer-service   
