@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: zuul-gateway-service
+server:
+  port: 2222
+zuul:
+  prefix: /api
+  routes:
+    db-service:
+      path: /db-service/**
+      url: http://localhost:5010
+    customer-service:
+      path: /customer-service/**
+      url: http://localhost:5020
+    employee-service:
+      path: /employee-service/**
+      url: http://localhost:5030
