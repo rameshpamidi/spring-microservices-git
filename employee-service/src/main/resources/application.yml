@@ -5,9 +5,9 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:1111/eureka/
  # instance:
- #   hostname: localhost
+   # hostname: localhost
 server:
-  port: 5020
+  port: 5030
 spring:
   application:
-    name: customer-service   
+    name: employee-service   

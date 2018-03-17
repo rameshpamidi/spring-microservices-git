@@ -18,12 +18,12 @@ import com.iconma.model.Customer;
 @RestController
 @RequestMapping(value = {CustomerServiceRestEndPoints.ROOT_CUSTOMER_ENDPOINT })
 public class CustomerServiceResource {
-	private static final String SAVE_CUSTOMER_DBSERVICE_ENDPOINT="http://db-service/api/dbservice/customer/saveCustomer";
-	private static final String UPDATE_CUSTOMER_DBSERVICE_ENDPOINT="http://db-service/api/dbservice/customer/updateCustomer";
-	private static final String DELETE_CUSTOMER_DBSERVICE_ENDPOINT="http://db-service/api/dbservice/customer/deleteCustomerById";
-	private static final String DETETEALL_CUSTOMERD_DBSERVICE_ENDPOINT="http://db-service/api/dbservice/customer/deleteAllCustomerse";
-	private static final String FIND_CUSTOMER_DBSERVICE_ENDPOINT="http://db-service/api/dbservice/customer/findCustomerById";
-	private static final String FINDALL_CUSTOMERS_DBSERVICE_ENDPOINT="http://db-service/api/dbservice/customer/findAllCustomers";
+	private static final String SAVE_CUSTOMER_DBSERVICE_ENDPOINT="http://db-service/customer/saveCustomer";
+	private static final String UPDATE_CUSTOMER_DBSERVICE_ENDPOINT="http://db-service/customer/updateCustomer";
+	private static final String DELETE_CUSTOMER_DBSERVICE_ENDPOINT="http://db-service/customer/deleteCustomerById";
+	private static final String DETETEALL_CUSTOMERD_DBSERVICE_ENDPOINT="http://db-service/customer/deleteAllCustomerse";
+	private static final String FIND_CUSTOMER_DBSERVICE_ENDPOINT="http://db-service/customer/findCustomerById";
+	private static final String FINDALL_CUSTOMERS_DBSERVICE_ENDPOINT="http://db-service/customer/findAllCustomers";
 	@Autowired
 	private RestTemplate restTemplate;
 	

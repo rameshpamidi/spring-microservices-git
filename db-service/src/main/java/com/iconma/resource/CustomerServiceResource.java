@@ -2,7 +2,6 @@ package com.iconma.resource;
 
 import java.util.List;
 import java.util.Optional;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -17,7 +16,7 @@ import com.iconma.entity.Customer;
 import com.iconma.repository.CustomerRepository;
 
 @RestController
-@RequestMapping(value = {CustomerServiceRestEndPoints.ROOT_CUSTOMER_ENDPOINT })
+@RequestMapping(value = { CustomerServiceRestEndPoints.ROOT_CUSTOMER_ENDPOINT })
 public class CustomerServiceResource {
 	@Autowired
 	private CustomerRepository customerRepository;
@@ -27,7 +26,7 @@ public class CustomerServiceResource {
 		return customerRepository.save(customer);
 	}
 
-	@PutMapping(value = {CustomerServiceRestEndPoints.UPDATE_CUSTOMER_ENDPOINT})
+	@PutMapping(value = { CustomerServiceRestEndPoints.UPDATE_CUSTOMER_ENDPOINT })
 	public Customer updateCustomer(@RequestBody Customer customer) {
 		Optional<Customer> optional = customerRepository.findById(customer.getCustomerId());
 		Customer customer1 = optional.get();
@@ -42,7 +41,7 @@ public class CustomerServiceResource {
 		customerRepository.deleteById(customerId);
 	}
 
-	@PutMapping(value = { CustomerServiceRestEndPoints.DELETEALL_CUSTOMERS_ENDPOINT})
+	@PutMapping(value = { CustomerServiceRestEndPoints.DELETEALL_CUSTOMERS_ENDPOINT })
 	public void deleteAllCustomers() {
 		customerRepository.deleteAll();
 	}
