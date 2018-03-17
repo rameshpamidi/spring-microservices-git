@@ -11,3 +11,10 @@ server:
 spring:
   application:
     name: customer-service   
+  cloud:
+    config:
+      discovery:
+        enabled: true
+      name: customer
+      profile: development
+      label: develop   

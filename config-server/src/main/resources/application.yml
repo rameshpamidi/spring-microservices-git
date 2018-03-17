@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/rameshpamidi/microservices-config-repo.git
+          force-pull: true
+          username: rameshpamidi45@gmail.com
+          password: ramesh@45
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:1111/eureka/
+server:
+  port: 3333
